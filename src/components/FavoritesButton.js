@@ -8,7 +8,7 @@ import { Favorite } from 'grommet-icons';
 
 const FavoriteButtonComponent = ({ jokesState }) => {
     const saveFavorite = () => {
-        localStorage.setItem(jokesState)
+        localStorage.setItem("jokesState", JSON.stringify(jokesState))
         console.log(jokesState)
     }
 

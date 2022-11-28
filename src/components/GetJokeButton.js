@@ -40,7 +40,7 @@ const GetJokesComponent = () => {
                 >{jokesState.setup}</Text>
                 <Text 
                     style={{
-                        'padding-bottom': '50px'
+                        'paddingBottom': '50px'
                     }}
                 >{jokesState.punchline}</Text>
                 <Button 

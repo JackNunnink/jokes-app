@@ -5,17 +5,20 @@ import {
 import { Favorite } from 'grommet-icons';
 
 const FavoritesContainersComponent = () => {
-    const joke = localStorage.getItem('id')
-    console.log(joke)
+    const jokeString = localStorage.getItem('jokesState')
+    const jokeObj = JSON.parse(jokeString)
+    console.log(jokeObj)
 
-    if(joke === null) {
+    // const joke = jokeObj.map(x => x * 2)
+
+    if(jokeObj === null) {
         return(
             <h1>Nothing here</h1>
         )
     }
 
     return (
-        <h1>{joke}</h1>
+        <p>{jokeObj.setup}</p>
     )
 }
 
