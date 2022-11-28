@@ -7,6 +7,8 @@ import {
 } from 'grommet';
 import { FormClose } from 'grommet-icons';
 
+import FavoritesContainersComponent from "./FavoritesContainers";
+
 const SideBarComponent = ({ setShowSidebar, showSidebar, size }) => {
     if(!showSidebar || size !== 'small') {
         return (
@@ -19,7 +21,7 @@ const SideBarComponent = ({ setShowSidebar, showSidebar, size }) => {
                     align='center'
                     justify='center'
                 >
-                    sidebar
+                    <FavoritesContainersComponent />
                 </Box>
             </Collapsible>
         )
@@ -45,7 +47,7 @@ const SideBarComponent = ({ setShowSidebar, showSidebar, size }) => {
                 align='center'
                 justify='center'
             >
-                sidebar
+                <FavoritesContainersComponent />
             </Box>
         </Layer>
     )

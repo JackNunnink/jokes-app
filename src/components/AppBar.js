@@ -5,7 +5,7 @@ import {
     Heading, 
 } from 'grommet';
 
-import { Notification } from 'grommet-icons';
+import { FormView, FormViewHide } from 'grommet-icons';
 
 const AppBar = (props) => (
     <Box
@@ -31,7 +31,7 @@ const AppBarComponent = ({ setShowSidebar, showSidebar }) => {
         >
             <Heading level='3' margin='none'>Jokes App</Heading>
             <Button 
-                icon={<Notification />} 
+                icon={showSidebar === false ? <FormViewHide /> : <FormView />} 
                 onClick={() => setShowSidebar(!showSidebar)}
             />
         </AppBar>

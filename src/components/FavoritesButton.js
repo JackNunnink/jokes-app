@@ -1,17 +1,15 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { 
-    Box, 
     Button,
-    Text
 } from 'grommet';
 import { Favorite } from 'grommet-icons';
 
 
 
-const FavoriteButtonComponent = ({ jokeState }) => {
-    const [favoriteState, setFavoriteState] = useState()
+const FavoriteButtonComponent = ({ jokesState }) => {
     const saveFavorite = () => {
-        setFavoriteState(jokeState)
+        localStorage.setItem(jokesState)
+        console.log(jokesState)
     }
 
     return (
