@@ -26,7 +26,7 @@ const AppBarComponent = ({ setShowSidebar, showSidebar }) => {
     return (
         <AppBar 
             style={{
-                'background-color': '#140f2d'
+                'background-color': '#1d3557',
             }}
         >
             <Heading level='3' margin='none'>Jokes App</Heading>

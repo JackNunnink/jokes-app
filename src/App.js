@@ -28,7 +28,12 @@ const App = () => {
     <Grommet theme={theme} full>
       <ResponsiveContext.Consumer>
         {size => (
-          <Box fill>
+          <Box 
+            fill 
+            style={{
+              'backgroundColor': '#e63946'
+            }}
+          >
             <AppBarComponent 
               setShowSidebar={setShowSidebar}
               showSidebar={showSidebar} 

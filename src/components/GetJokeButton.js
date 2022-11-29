@@ -27,9 +27,11 @@ const GetJokesComponent = () => {
                 align='center' 
                 justify='center'
                 style={{
-                    'border': 'solid #3f88c5',
+                    'backgroundColor': '#f1faee',
                     'border-radius': '10px',
-                    'margin': '20%'
+                    'margin': '20%',
+                    'paddingTop': '10%',
+                    'paddingBottom': '10%'
                 }}
             >
                 <FavoriteButtonComponent jokesState={jokesState} />

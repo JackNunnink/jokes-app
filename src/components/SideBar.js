@@ -20,6 +20,10 @@ const SideBarComponent = ({ setShowSidebar, showSidebar, size }) => {
                     elevation='small'
                     align='center'
                     justify='center'
+                    style={{
+                        'backgroundColor': '#457b9d',
+                        'overflow':'auto'
+                    }}
                 >
                     <FavoritesContainersComponent />
                 </Box>
@@ -35,6 +39,10 @@ const SideBarComponent = ({ setShowSidebar, showSidebar, size }) => {
                 justify='end'
                 align='center'
                 direction='row'
+                style={{
+                    'backgroundColor': '#d72638',
+                    'overflow': 'auto'
+                }}
             >
             <Button 
                 icon={<FormClose />}
@@ -46,6 +54,9 @@ const SideBarComponent = ({ setShowSidebar, showSidebar, size }) => {
                 background='light-2'
                 align='center'
                 justify='center'
+                style={{
+                    'backgroundColor': '#d72638'
+                }}
             >
                 <FavoritesContainersComponent />
             </Box>

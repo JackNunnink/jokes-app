@@ -1,6 +1,8 @@
 import React from 'react';
-import { 
+import {
+    Box,
     Button,
+    Text
 } from 'grommet';
 import { Favorite } from 'grommet-icons';
 
@@ -18,7 +20,22 @@ const FavoritesContainersComponent = () => {
     }
 
     return (
-        <p>{jokeObj.setup}</p>
+        <Box
+            align='center' 
+            justify='center'
+            style={{
+                'backgroundColor': '#f1faee',
+                'border-radius': '10px',
+                'margin': '20%',
+                'padding': '10%'
+            }}
+        >
+            <Button 
+                icon={<Favorite />}
+            />
+            <Text>{jokeObj.setup}</Text>
+            <Text>{jokeObj.punchline}</Text>
+        </Box>
     )
 }
 
