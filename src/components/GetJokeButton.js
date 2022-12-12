@@ -35,16 +35,32 @@ const GetJokesComponent = () => {
                 }}
             >
                 <FavoriteButtonComponent jokesState={jokesState} />
-                <Text 
+                {jokesState.setup ? (
+                    <div>
+                        <Text 
+                            style={{
+                                'padding': '10px'
+                            }}
+                        >
+                            {jokesState.setup}
+                        </Text>
+                        <Text 
+                            style={{
+                                'paddingBottom': '50px'
+                            }}
+                        >
+                            {jokesState.punchline}
+                        </Text>
+                    </div>
+                ) : (
+                    <Text
                     style={{
                         'padding': '10px'
                     }}
-                >{jokesState.setup}</Text>
-                <Text 
-                    style={{
-                        'paddingBottom': '50px'
-                    }}
-                >{jokesState.punchline}</Text>
+                    >
+                        {jokesState.value}
+                    </Text>
+                )}
                 <Button 
                     icon={<Refresh />}
                     onClick={onClick}
