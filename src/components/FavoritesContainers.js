@@ -20,22 +20,36 @@ const FavoritesContainersComponent = () => {
     }
 
     return (
-        <Box
-            align='center' 
-            justify='center'
-            style={{
-                'backgroundColor': '#f1faee',
-                'border-radius': '10px',
-                'margin': '20%',
-                'padding': '10%'
-            }}
-        >
-            <Button 
-                icon={<Favorite />}
-            />
-            <Text>{jokeObj.setup}</Text>
-            <Text>{jokeObj.punchline}</Text>
-        </Box>
+        <div>
+            {Object.keys(jokeObj).map(index => {
+                return (
+                    <div key={index}>
+                        <Box
+                            align='center' 
+                            justify='center'
+                            style={{
+                                'backgroundColor': '#f1faee',
+                                'border-radius': '10px',
+                                'margin': '20%',
+                                'padding': '10%'
+                            }}
+                        >
+                            <Button 
+                                icon={<Favorite />}
+                            />
+                            {jokeObj.setup ? (
+                                <div>
+                                    <Text>{jokeObj.setup}</Text>
+                                    <Text>{jokeObj.punchline}</Text>
+                                </div>
+                            ) : (
+                                <Text>{jokeObj.value}</Text>
+                            )}
+                        </Box>
+                    </div>
+                )
+            })}
+        </div>
     )
 }
 
